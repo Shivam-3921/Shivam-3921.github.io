@@ -1,121 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Patel | Portfolio</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        header {
-            border-bottom: 1px solid #e1e4e8;
-            padding-bottom: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; color: #2c3e50; }
-        
-        /* Tab Navigation Styles */
-        .nav-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #e1e4e8;
-            padding-bottom: 0.5rem;
-        }
-        .tab-btn {
-            background: none;
-            border: none;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #586069;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-        .tab-btn:hover {
-            color: #0366d6;
-            background-color: #f6f8fa;
-        }
-        .tab-btn.active {
-            color: #fff;
-            background-color: #2c3e50;
-        }
-
-        /* Content Section Visibility */
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shivam Patel — PhD researcher and data scientist specializing in machine learning, scientific computing, and Python-based ML pipelines. Portfolio, projects, and resume.">
+  <title>Shivam Patel | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
 
-    <header>
-        <h1>SHIVAM PATEL</h1>
-    </header>
-
-    <nav class="nav-tabs">
-        <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
-        <button class="tab-btn" onclick="openTab(event, 'experience')">Work Experience & Skills</button>
-        <button class="tab-btn" onclick="openTab(event, 'research')">Research</button>
-        <button class="tab-btn" onclick="openTab(event, 'projects')">Computational Projects</button>
-        <button class="tab-btn" onclick="openTab(event, 'accomplishments')">Other Achievements</button>
-    </nav>
-
-    <div id="about" class="tab-content active">
-        <h2>About Me</h2>
-        <p>This is where your introduction and personal interests will go.</p>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#top" class="site-logo">Shivam Patel</a>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#about" class="active">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 17.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zm0 1.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm12-7a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1 0-1.6h2.4a.8.8 0 0 1 .8.8zM4 12a.8.8 0 0 1-.8.8H.8a.8.8 0 0 1 0-1.6h2.5a.8.8 0 0 1 .8.8zm16.5-8.5a.8.8 0 0 1 0 1l-1.8 1.8a.8.8 0 0 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM6.3 17.7a.8.8 0 0 1 0 1l-1.7 1.8a.8.8 0 1 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM12 0a.8.8 0 0 1 .8.8v2.5a.8.8 0 0 1-1.6 0V.8A.8.8 0 0 1 12 0zm0 20a.8.8 0 0 1 .8.8v2.4a.8.8 0 0 1-1.6 0v-2.4a.8.8 0 0 1 .8-.8zM3.5 3.5a.8.8 0 0 1 1 0l1.8 1.8a.8.8 0 1 1-1 1L3.5 4.6a.8.8 0 0 1 0-1zm14.2 14.2a.8.8 0 0 1 1 0l1.8 1.7a.8.8 0 0 1-1 1l-1.8-1.7a.8.8 0 0 1 0-1z"/>
+          </svg>
+          <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16.5 6A10.5 10.5 0 0 1 4.7 16.4 8.5 8.5 0 1 0 16.4 4.7l.1 1.3zm-1.7-2a9 9 0 0 1 .2 2 9 9 0 0 1-11 8.8 9.4 9.4 0 0 1-.8-.3c-.4 0-.8.3-.7.7a10 10 0 0 0 .3.8 10 10 0 0 0 9.2 6 10 10 0 0 0 4-19.2 9.7 9.7 0 0 0-.9-.3c-.3-.1-.7.3-.6.7a9 9 0 0 1 .3.8z"/>
+          </svg>
+        </button>
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Open menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <div id="experience" class="tab-content">
-        <h2>Work Experience</h2>
-        <p>This is where your teaching assistantship and skills matrix will go.</p>
+  <main>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="hero">
+        <div class="hero-photo">
+          <img src="assets/photo.png" alt="Shivam Patel">
+        </div>
+        <div class="hero-content">
+          <p class="section-label">About Me</p>
+          <h1 class="hero-name">Shivam Patel</h1>
+          <p class="hero-tagline">PhD Researcher in Scientific ML &amp; Data Science — Portland State University</p>
+          <p class="hero-summary">
+            I build ML pipelines and numerical models in Python and PyTorch — from classification and time-series analysis to physics-informed neural networks and neural operators. Experienced with large-scale data analysis on HPC clusters, algorithm development, and validating numerical accuracy against analytical solutions.
+          </p>
+          <div class="skill-pills" aria-label="Top skills">
+            <span class="pill">Python</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Machine Learning</span>
+            <span class="pill">Deep Learning</span>
+            <span class="pill">Scikit-Learn</span>
+            <span class="pill">Data Analysis</span>
+            <span class="pill">Git</span>
+          </div>
+          <div class="hero-actions">
+            <a href="Resume.pdf" class="btn btn-primary" download>Download Resume</a>
+            <a href="mailto:shivamp@pdx.edu" class="btn btn-icon" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Shivam-3921" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/skpatel3921" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.065-1.868-3.065-1.868 0-2.154 1.459-2.154 2.967v5.702h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.562 2.841-1.562 3.039 0 3.6 2.001 3.6 4.601v5.594z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Skills -->
+    <section id="experience" class="section">
+      <p class="section-label">Experience &amp; Skills</p>
+      <h2>Work Experience</h2>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <h3>Graduate Research Assistant</h3>
+            <p class="timeline-org">Portland State University</p>
+            <p class="timeline-date">Sep 2024 – Present</p>
+            <ul>
+              <li>Developing methods for eigenvalue problems of magnetic Schrödinger operators to study energy quantization under electromagnetic fields.</li>
+              <li>Generated quadrature methods for singular integral kernels using HPC clusters for large-scale computations.</li>
+              <li>Built and trained PINNs and Fourier Neural Operators in PyTorch for PDE-governed electromagnetic wave propagation, reducing reliance on traditional solvers.</li>
+              <li>Used NGSolve and MFEM to compute eigenvector localization with applications to wave localization in disordered media.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <h3>Graduate Teaching Assistant</h3>
+            <p class="timeline-org">Portland State University</p>
+            <p class="timeline-date">Sep 2025 – Present</p>
+            <ul>
+              <li>Independently delivered lectures and led recitations for a Calculus section of 30 students.</li>
+              <li>Conducted office hours and one-on-one tutoring to strengthen student understanding of core concepts.</li>
+              <li>Evaluated exams and assignments with targeted feedback to drive improvement.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <h3>Graduate Research Assistant</h3>
+            <p class="timeline-org">IISER Bhopal</p>
+            <p class="timeline-date">Aug 2023 – Apr 2024</p>
+            <ul>
+              <li>Developed a full FEM pipeline in MATLAB and C++ for Laplace, Poisson, and Helmholtz equations with O(h²) convergence validated against analytical solutions.</li>
+              <li>Applied the Galerkin method for weak solutions and convergence analysis in multi-physics simulations.</li>
+              <li>Analyzed existence and uniqueness of weak solutions in Sobolev spaces for a robust solver framework.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <h3>Research Intern</h3>
+            <p class="timeline-org">University of Calgary, Canada</p>
+            <p class="timeline-date">May 2023 – Jul 2023</p>
+            <ul>
+              <li>Studied Banach and Hilbert spaces, Riesz Representation and Lax-Milgram theorems for PDE theory applications.</li>
+              <li>Analyzed existence and uniqueness of weak solutions to elliptic PDEs via Sobolev space theory.</li>
+              <li>Explored continuous Galerkin FEM for Laplace, Heat, and Wave equations in boundary value problems.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <h2>Skills</h2>
+      <div class="skills-groups">
+        <div class="skills-group">
+          <h3>Programming &amp; Tools</h3>
+          <div class="skill-pills">
+            <span class="pill">Python</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">TensorFlow</span>
+            <span class="pill">NumPy</span>
+            <span class="pill">SciPy</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">C++</span>
+            <span class="pill">R</span>
+            <span class="pill">SQL</span>
+            <span class="pill">MATLAB</span>
+            <span class="pill">Git</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">HPC / Linux</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>ML / AI</h3>
+          <div class="skill-pills">
+            <span class="pill">Deep Learning</span>
+            <span class="pill">Classification</span>
+            <span class="pill">Time-Series</span>
+            <span class="pill">Reinforcement Learning</span>
+            <span class="pill">PINNs</span>
+            <span class="pill">Neural Operators</span>
+            <span class="pill">Transformers</span>
+            <span class="pill">Statistical Analysis</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>Scientific Computing</h3>
+          <div class="skill-pills">
+            <span class="pill">MFEM</span>
+            <span class="pill">NGSolve</span>
+            <span class="pill">DeepXDE</span>
+            <span class="pill">CUDA</span>
+            <span class="pill">FEM</span>
+            <span class="pill">Numerical Linear Algebra</span>
+            <span class="pill">Optimization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <p class="section-label">Computational Projects</p>
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Heart Disease Classification</h3>
+            <a href="https://github.com/Shivam-3921/cardio_disease_prediction" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">IISER Bhopal</p>
+          <p class="project-metric">80% recall, 71% F1-score (non-linear SVM)</p>
+          <ul>
+            <li>Conducted EDA with Chi-Square tests to uncover class imbalances and feature correlations.</li>
+            <li>Developed and tuned 6 classification models with cross-validation and hyperparameter optimization.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Scikit-Learn</span>
+            <span class="tag">SVM</span>
+            <span class="tag">EDA</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Weather Image Classification</h3>
+            <a href="https://github.com/Shivam-3921/Weather_image_classification" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">Portland State University</p>
+          <p class="project-metric">67.37% → 80.19% test accuracy (CNN → ResNet-18)</p>
+          <ul>
+            <li>Preprocessed and augmented an uncurated weather image dataset with normalization and random transforms.</li>
+            <li>Applied transfer learning with ResNet-18, significantly improving accuracy on near-indistinguishable classes.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">CNN</span>
+            <span class="tag">ResNet-18</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Neural Operator Heat Transfer Solver</h3>
+            <a href="https://github.com/Shivam-3921/Neural_Operators" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">Portland State University</p>
+          <p class="project-metric">MSE 10⁻⁵; zero-shot super-resolution</p>
+          <ul>
+            <li>Formulated a Fourier Neural Operator in PyTorch to learn the heat equation solution operator, competitive with high-resolution numerical solvers.</li>
+            <li>Designed training methodology for generalization across varying initial conditions and non-linear physical systems.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">FNO</span>
+            <span class="tag">Operator Learning</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>PINNs for Differential Equations</h3>
+            <a href="https://github.com/Shivam-3921/Physics_Informed_Neural_Networks_for_solving_differential_equations" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">Portland State University</p>
+          <p class="project-metric">90–95% accuracy across multiple initial conditions</p>
+          <ul>
+            <li>Designed PINNs in PyTorch with PDE-based loss functions and L-BFGS optimization for faster convergence.</li>
+            <li>Applied Runge-Kutta time stepping in a discrete-time PINN framework for transport equations.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">PINNs</span>
+            <span class="tag">L-BFGS</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Task Allocation &amp; Scheduling</h3>
+            <a href="https://github.com/Shivam-3921/Task_Allocation_Sequencing_and_Scheduling_problem" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">IISER Bhopal</p>
+          <p class="project-metric">Outperformed brute-force on complex task configurations</p>
+          <ul>
+            <li>Formulated a combinatorial optimization problem to minimize total mission time for human-robot collaborative teams.</li>
+            <li>Implemented Genetic Algorithms in Python to efficiently explore large solution spaces.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Genetic Algorithms</span>
+            <span class="tag">Optimization</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Noise-Driven Route Planning</h3>
+            <a href="https://github.com/Shivam-3921/Noise-Driven_Route_Planning" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">IISER Bhopal</p>
+          <p class="project-metric">GA + A* with STFT noise feature extraction</p>
+          <ul>
+            <li>Processed real sound samples via STFT (Librosa) for noise feature extraction and normalization.</li>
+            <li>Implemented Genetic and A* algorithms to generate routes balancing noise exposure and travel distance.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Librosa</span>
+            <span class="tag">A*</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section">
+      <p class="section-label">Research</p>
+      <h2>Research Focus</h2>
+
+      <div class="research-focus">
+        <ul>
+          <li>Scientific ML for PDE-governed problems using PINNs and Fourier Neural Operators.</li>
+          <li>Large-scale numerical computation on HPC Linux clusters.</li>
+          <li>Finite-element methods for wave localization and eigenvalue problems.</li>
+          <li>Quadrature methods for singular integral kernels in electromagnetic settings.</li>
+        </ul>
+      </div>
+
+      <h2>Conference Presentations</h2>
+      <div class="presentation-cards">
+        <article class="presentation-card">
+          <cite>Accurate Computation of Eigenvalues of the Magnetic Dirichlet Laplacian via Boundary Integral Methods</cite>
+          <p class="presentation-meta">Shivam Patel, Jeffrey Ovall, Li Zhu — 5th Biennial PNW SIAM, Oct 2025</p>
+        </article>
+        <article class="presentation-card">
+          <cite>Eigenvalues of Laplacian on perforated domains</cite>
+          <p class="presentation-meta">Shivam Patel, Jeffrey Ovall — 9th Cascade RAIN Meeting, Apr 2025</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <p class="section-label">Education &amp; Coursework</p>
+      <h2>Education</h2>
+
+      <div class="education-grid">
+        <article class="edu-card">
+          <h3 class="edu-degree">PhD, Computational &amp; Applied Mathematics</h3>
+          <p class="edu-institution">Portland State University</p>
+          <p class="edu-meta">GPA 4.00/4.00 · Sep 2024 – Present</p>
+        </article>
+        <article class="edu-card">
+          <h3 class="edu-degree">MS, Mathematics &amp; Data Science</h3>
+          <p class="edu-institution">IISER Bhopal</p>
+          <p class="edu-meta">GPA 9.01/10.00 · Aug 2023 – May 2024</p>
+        </article>
+        <article class="edu-card">
+          <h3 class="edu-degree">BS, Mathematics &amp; Data Science</h3>
+          <p class="edu-institution">IISER Bhopal</p>
+          <p class="edu-meta">GPA 8.78/10.00 · Aug 2019 – May 2023</p>
+        </article>
+      </div>
+
+      <div class="coursework">
+        <h3>Portland State University</h3>
+        <p>Statistical Learning, Advanced Optimization &amp; Data Assimilation, Advanced Numerical Analysis, Functional Analysis</p>
+
+        <h3>IISER Bhopal</h3>
+        <p>Machine Learning, Applied Deep Learning, Applied Optimization, Probability &amp; Statistics, Data Structures &amp; Algorithms, Numerical Analysis, Partial Differential Equations, Combinatorics &amp; Graph Theory, Econometrics, Artificial Intelligence, Signal &amp; Systems, Fourier Analysis, Discrete Mathematics, Advanced Programming in Python</p>
+
+        <h3>Coursera</h3>
+        <p>Deep Learning Specialization, IBM Machine Learning Specialization, Fibonacci Numbers &amp; Golden Ratio</p>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section">
+      <p class="section-label">Other Achievements</p>
+      <h2>Achievements</h2>
+      <ul class="achievements-list">
+        <li>Participated in CBMS Conference: Research at the Interface of Applied Mathematics and Machine Learning, University of Houston (Dec 2025)</li>
+        <li>Structure-Preserving Scientific Computing and Machine Learning Summer School &amp; Hackathon, University of Washington (Jun 2025)</li>
+        <li>Presented at Advanced Instructional School, National Centre for Mathematics, IISc Bangalore (Dec 2023)</li>
+        <li>Attended Vijyoshi 2019 — National Science Camp (KVPY), IISER Kolkata</li>
+        <li>Recipient of DST-INSPIRE Scholarship, Department of Science &amp; Technology, Government of India</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-text">&copy; 2026 Shivam Patel</p>
+    <div class="footer-links">
+      <a href="mailto:shivamp@pdx.edu" class="btn btn-icon" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </a>
+      <a href="https://github.com/Shivam-3921" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/skpatel3921" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.065-1.868-3.065-1.868 0-2.154 1.459-2.154 2.967v5.702h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.562 2.841-1.562 3.039 0 3.6 2.001 3.6 4.601v5.594z"/>
+        </svg>
+      </a>
     </div>
+  </footer>
 
-    <div id="research" class="tab-content">
-        <h2>Research</h2>
-        <p>This is where your core PhD research and presentations will go.</p>
-    </div>
+  <div class="scroll-top" id="scroll-top">
+    <a href="#top" aria-label="Scroll to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </a>
+  </div>
 
-    <div id="projects" class="tab-content">
-        <h2>Computational Projects</h2>
-        <p>This is where your machine learning and numerical solvers will go.</p>
-    </div>
-
-    <div id="accomplishments" class="tab-content">
-        <h2>Other Achievements</h2>
-        <p>This is where your summer schools, awards, and class list will go.</p>
-    </div>
-
-    <script>
-        function openTab(evt, tabId) {
-            // Hide all tab content
-            const contents = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < contents.length; i++) {
-                contents[i].classList.remove("active");
-            }
-
-            // Remove active class from all buttons
-            const buttons = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("active");
-            }
-
-            // Show current tab, add active class to clicked button
-            document.getElementById(tabId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
