@@ -3,67 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Patel | Portfolio</title>
+    <title>Shivam Patel | Portland State University</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
-        header { background: #24292e; color: #fff; padding: 2rem 1rem; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { margin: 0.5rem 0 0; font-size: 1.2rem; color: #00bcd4; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        section { background: #fff; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid #24292e; padding-bottom: 0.3rem; color: #24292e; }
-        .project { margin-bottom: 1.5rem; }
-        .project-title { font-weight: bold; font-size: 1.2rem; color: #0366d6; }
-        .skills-list { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; }
-        .skills-list li { background: #e1f5fe; color: #0277bd; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.9rem; }
-        .contact-links a { display: inline-block; margin-right: 1rem; color: #0366d6; text-decoration: none; font-weight: bold; }
-        .contact-links a:hover { text-decoration: underline; }
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #0366d6;
+            --text-color: #333333;
+            --light-bg: #f8f9fa;
+            --border-color: #e1e4e8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Profile Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-main h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .header-main .title-sub {
+            font-size: 1.1rem;
+            color: #586069;
+            margin: 0 0 1rem 0;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Universal Styles */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            margin: 0 0 1rem 0;
+            text-align: justify;
+        }
+
+        /* Grid Lists for Experiences and Education */
+        .item-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .item-title {
+            font-weight: 600;
+            color: #111111;
+        }
+
+        .item-org {
+            color: #444444;
+            font-style: italic;
+        }
+
+        .item-date {
+            color: #666666;
+            font-size: 0.9rem;
+            text-align: right;
+        }
+
+        .item-details {
+            grid-column: 1 / -1;
+            margin-top: 0.25rem;
+            padding-left: 1.2rem;
+        }
+
+        .item-details li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Tags Block for Skills */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .skills-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .skills-group strong {
+            font-size: 0.95rem;
+            color: #444;
+            min-width: 120px;
+        }
+
+        .skill-tag {
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #333;
+        }
+
+        /* Layout Responsiveness */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .item-row {
+                grid-template-columns: 1fr;
+            }
+            .item-date {
+                text-align: left;
+                font-size: 0.85rem;
+                margin-top: -0.2rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Shivam Patel</h1>
-        <p> Computational Mathematician</p>
-    </header>
-
     <div class="container">
+        
+        <header>
+            <div class="header-main">
+                <h1>SHIVAM PATEL</h1>
+                <div class="title-sub">PhD Researcher in Scientific ML & Computational Mathematics</div>
+                <div class="contact-links">
+                    <a href="mailto:shivamp@pdx.edu">Email</a> •
+                    <a href="https://github.com/Shivam-3921" target="_blank">GitHub</a> •
+                    <a href="https://www.linkedin.com/in/skpatel3921" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
         <section id="about">
             <h2>About Me</h2>
-            <p>PhD researcher in scientific ML, numerical methods, and optimization, with experience in large-scale data analysis on HPC systems.
-Proficient in Python, C++, and Linux-based scientific computing environments with hands-on experience developing and optimizing
-computational algorithms, validating numerical accuracy against analytical solutions, and building efficient ML pipelines in PyTorch.</p>
+            <p>
+                I am a PhD researcher in scientific ML, numerical methods, and optimization at Portland State University, with experience in large-scale data analysis on HPC systems. My work focuses on developing and optimizing computational algorithms, validating numerical accuracy against analytical solutions, and building efficient ML pipelines in PyTorch.
+            </p>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <section id="experience">
+            <h2>Research Experience</h2>
+            
+            <div class="item-row">
+                <div>
+                    <span class="item-title">Graduate Research Assistant</span><br>
+                    <span class="item-org">Portland State University</span>
+                </div>
+                <div class="item-date">Sep 2024 — Present</div>
+                <div class="item-details">
+                    <ul>
+                        <li>Developing new method for solving eigenvalue problems of magnetic Schrödinger operators to understand energy quantization under electromagnetic fields.</li>
+                        <li>Generated new quadrature methods for singular integral kernels, utilizing HPC Clusters for large-scale computations.</li>
+                        <li>Utilized advanced finite-element frameworks such as NGSolve and MFEM to compute eigenvector localization.</li>
+                        <li>Built and trained PINNs and Fourier Neural Operators in PyTorch to solve PDE-governed electromagnetic wave propagation problems.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item-row">
+                <div>
+                    <span class="item-title">Graduate Research Assistant</span><br>
+                    <span class="item-org">IISER Bhopal</span>
+                </div>
+                <div class="item-date">Aug 2023 — Apr 2024</div>
+                <div class="item-details">
+                    <ul>
+                        <li>Developed a full FEM pipeline in MATLAB and C++ to solve Laplace, Poisson, and Helmholtz equations, validating convergence rates against analytical theoretical bounds.</li>
+                        <li>Applied the Galerkin Method to approximate weak solutions and convergence analysis for multi-physics simulations.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <div class="project-title">Neural Operator-based Solver for Heat Transfer Problems</div>
-                <p></p>
+            <h2>Selected Projects</h2>
+
+            <div class="item-row">
+                <div><span class="item-title">Neural Operator-based Solver for Heat Transfer Problems</span></div>
+                <div class="item-date">PSU</div>
+                <div class="item-details">
+                    Formulated a Fourier Neural Operator (FNO) in PyTorch to learn the solution operator of the heat equation, achieving an MSE of 10⁻⁵. Demonstrated zero-shot super-resolution outputs beyond the training grid without retraining.
+                </div>
             </div>
-            <div class="project">
-                <div class="project-title">Physics Informed Neural Networks for solving differential equations</div>
-                <p></p>
+
+            <div class="item-row">
+                <div><span class="item-title">Physics Informed Neural Networks (PINNs)</span></div>
+                <div class="item-date">PSU</div>
+                <div class="item-details">
+                    Designed and trained PINNs in PyTorch to solve boundary value problems involving Laplacian eigenfunctions. Implemented PDE-based loss functions and optimized training using the L-BFGS algorithm.
+                </div>
+            </div>
+
+            <div class="item-row">
+                <div><span class="item-title">Combinatorial Optimization & Task Allocation</span></div>
+                <div class="item-date">IISER Bhopal</div>
+                <div class="item-details">
+                    Formulated a combinatorial optimization problem to minimize total mission time for human-robot teams. Implemented Genetic Algorithms (GA) in Python to efficiently explore large solution spaces.
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Connect</h2>
-            <div class="contact-links">
-                <a href="https://github.com/Shivam-3921" target="_blank">GitHub</a>
-                <a href="mailto:your.email@example.com">shivamp at pdx dot edu</a>
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="item-row">
+                <div>
+                    <span class="item-title">PhD in Computational and Applied Mathematics</span><br>
+                    <span class="item-org">Portland State University (GPA: 4.00/4.00)</span>
+                </div>
+                <div class="item-date">Sep 2024 — Present</div>
+            </div>
+
+            <div class="item-row">
+                <div>
+                    <span class="item-title">MS in Mathematics & Data Science</span><br>
+                    <span class="item-org">Indian Institute of Science Education and Research, Bhopal</span>
+                </div>
+                <div class="item-date">Aug 2023 — May 2024</div>
             </div>
         </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skills-group">
+                    <strong>Languages & Tools:</strong>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Linux HPC</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">MATLAB</span>
+                </div>
+                <div class="skills-group">
+                    <strong>ML & Computing:</strong>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">PINNs</span>
+                    <span class="skill-tag">Neural Operators</span>
+                    <span class="skill-tag">Finite Element Methods (FEM)</span>
+                    <span class="skill-tag">MFEM / NGSolve</span>
+                </div>
+            </div>
+        </section>
+
     </div>
 
 </body>
