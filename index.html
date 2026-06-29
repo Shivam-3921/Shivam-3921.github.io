@@ -15,24 +15,46 @@
         }
         header {
             border-bottom: 1px solid #e1e4e8;
-            padding-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; color: #2c3e50; }
+        
+        /* Tab Navigation Styles */
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
             margin-bottom: 2rem;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 0.5rem;
         }
-        h1 {
-            margin: 0 0 0.5rem 0;
-            font-size: 2.2rem;
-            color: #2c3e50;
-        }
-        p {
-            color: #586069;
-            margin: 0 0 1rem 0;
-            font-size: 1.1rem;
-        }
-        .links a {
-            color: #0366d6;
-            text-decoration: none;
-            margin-right: 1rem;
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
             font-weight: 500;
+            color: #586069;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            color: #0366d6;
+            background-color: #f6f8fa;
+        }
+        .tab-btn.active {
+            color: #fff;
+            background-color: #2c3e50;
+        }
+
+        /* Content Section Visibility */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
         }
     </style>
 </head>
@@ -40,13 +62,60 @@
 
     <header>
         <h1>SHIVAM PATEL</h1>
-        <p>PhD Researcher in Scientific ML & Computational Mathematics</p>
-        <div class="links">
-            <a href="mailto:shivamp@pdx.edu">Email</a>
-            <a href="https://github.com/Shivam-3921" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/skpatel3921" target="_blank">LinkedIn</a>
-        </div>
     </header>
+
+    <nav class="nav-tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
+        <button class="tab-btn" onclick="openTab(event, 'experience')">Work Experience & Skills</button>
+        <button class="tab-btn" onclick="openTab(event, 'research')">Research</button>
+        <button class="tab-btn" onclick="openTab(event, 'projects')">Computational Projects</button>
+        <button class="tab-btn" onclick="openTab(event, 'accomplishments')">Achievements</button>
+    </nav>
+
+    <div id="about" class="tab-content active">
+        <h2>About Me</h2>
+        <p>This is where your introduction and personal interests will go.</p>
+    </div>
+
+    <div id="experience" class="tab-content">
+        <h2>Experience & Skills</h2>
+        <p>This is where your teaching assistantship and skills matrix will go.</p>
+    </div>
+
+    <div id="research" class="tab-content">
+        <h2>Research</h2>
+        <p>This is where your core PhD research and presentations will go.</p>
+    </div>
+
+    <div id="projects" class="tab-content">
+        <h2>Computational Projects</h2>
+        <p>This is where your machine learning and numerical solvers will go.</p>
+    </div>
+
+    <div id="accomplishments" class="tab-content">
+        <h2>Accomplishments & Coursework</h2>
+        <p>This is where your summer schools, awards, and class list will go.</p>
+    </div>
+
+    <script>
+        function openTab(evt, tabId) {
+            // Hide all tab content
+            const contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            const buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+
+            // Show current tab, add active class to clicked button
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
