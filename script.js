@@ -69,4 +69,35 @@
     if (!scrollTopBtn) return;
     scrollTopBtn.classList.toggle("visible", window.scrollY > 400);
   });
+
+  const timelineCards = document.querySelectorAll(".timeline-card");
+
+  function closeOtherCards(except) {
+    timelineCards.forEach((card) => {
+      if (card === except) return;
+      card.classList.remove("is-open");
+      card.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function toggleCard(card) {
+    const willOpen = !card.classList.contains("is-open");
+    closeOtherCards(card);
+    card.classList.toggle("is-open", willOpen);
+    card.setAttribute("aria-expanded", String(willOpen));
+  }
+
+  timelineCards.forEach((card) => {
+    card.addEventListener("click", () => toggleCard(card));
+    card.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      e.preventDefault();
+      toggleCard(card);
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".timeline-card")) return;
+    closeOtherCards(null);
+  });
 })();

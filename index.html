@@ -94,27 +94,27 @@
       <div class="timeline">
         <article class="timeline-item">
           <span class="timeline-dot" aria-hidden="true"></span>
-          <div class="timeline-card">
+          <div class="timeline-card" tabindex="0" role="button" aria-expanded="false">
             <h3>Graduate Research Assistant</h3>
             <p class="timeline-org">Portland State University</p>
             <p class="timeline-date">Sep 2024 – Present</p>
-            <ul>
-              <li>Developing new methods for eigenvalue problems of magnetic Schrödinger operators to understand energy quantization of quantum particles under electromagnetic fields.</li>
-              <li>Generated new quadrature methods for singular integral kernels, utilizing HPC clusters for large-scale computations.</li>
-              <li>Utilized advanced finite-element frameworks such as NGSolve and MFEM to compute eigenvector localization, with applications to wave localization in disordered media.</li>
-              <li>Built and trained PINNs and Fourier Neural Operators in PyTorch for PDE-governed electromagnetic wave propagation, reducing reliance on traditional numerical solvers.</li>
+            <ul class="timeline-details">
+              <li>Developing new methods for solving eigenvalue problems of magnetic Schrödinger operators, which helps to understand the energy quantization of quantum particles under the influence of an electromagnetic field.</li>
+              <li>Built and trained PINNs and Fourier Neural Operators in PyTorch to solve PDE-governed electromagnetic wave propagation problems, reducing reliance on traditional numerical solvers.</li>
+              <li>Designed new quadrature methods for singular integral kernels, executing large-scale computations on HPC Linux clusters.</li>
+              <li>Applied advanced finite-element frameworks (NGSolve, MFEM) for eigenvector localization analysis in disordered media.</li>
             </ul>
           </div>
         </article>
 
         <article class="timeline-item">
           <span class="timeline-dot" aria-hidden="true"></span>
-          <div class="timeline-card">
+          <div class="timeline-card" tabindex="0" role="button" aria-expanded="false">
             <h3>Graduate Teaching Assistant</h3>
             <p class="timeline-org">Portland State University</p>
             <p class="timeline-date">Sep 2025 – Jun 2026</p>
-            <ul>
-              <li>Independently delivered lectures and led recitations for a Calculus section of 30 students, taking full ownership of instruction and student engagement.</li>
+            <ul class="timeline-details">
+              <li>Independently delivered lectures and led recitations, taking full ownership of instruction and student engagement.</li>
               <li>Conducted regular office hours and one-on-one tutoring sessions, providing targeted support to strengthen student understanding of core concepts.</li>
               <li>Evaluated student performance through grading exams and assignments, providing feedback to drive improvement.</li>
             </ul>
@@ -123,42 +123,40 @@
 
         <article class="timeline-item">
           <span class="timeline-dot" aria-hidden="true"></span>
-          <div class="timeline-card">
+          <div class="timeline-card" tabindex="0" role="button" aria-expanded="false">
             <h3>Financial Data Analyst</h3>
             <p class="timeline-org">Dark Horse Stocks, India</p>
             <p class="timeline-date">May 2024 – Aug 2024</p>
-            <ul>
-              <li>Utilized SQL and Python to automate data collection from BSE and NSE, reducing manual data entry time by 30%.</li>
-              <li>Presented detailed financial analysis using statistical models to forecast portfolio performance and evaluate investment scenarios.</li>
-              <li>Maintained dynamic Power BI dashboard for weekly market insights and investment recommendations, contributing to an 8% increase in client engagement.</li>
+            <ul class="timeline-details">
+              <li>Automated data collection pipelines from BSE and NSE using SQL and Python, reducing manual data entry time by 30%.</li>
+              <li>Presented detailed financial analysis using statistical models to forecast portfolio performance and evaluate the impact of investment on various financial scenarios, enhancing clients’ understanding and confidence in investment choices.</li>
+              <li>Maintained dynamic Power BI dashboard to produce weekly market insights and investment recommendations, contributing to an 8% increase in client engagement.</li>
             </ul>
           </div>
         </article>
 
         <article class="timeline-item">
           <span class="timeline-dot" aria-hidden="true"></span>
-          <div class="timeline-card">
+          <div class="timeline-card" tabindex="0" role="button" aria-expanded="false">
             <h3>Graduate Research Assistant</h3>
             <p class="timeline-org">IISER Bhopal</p>
             <p class="timeline-date">Aug 2023 – Apr 2024</p>
-            <ul>
-              <li>Developed a full FEM pipeline in MATLAB and C++ for Laplace, Poisson, and Helmholtz equations, validated against analytical solutions with convergence rates consistent with theoretical O(h²) error bounds.</li>
-              <li>Applied the Galerkin method to approximate weak solutions and convergence analysis for robust multi-physics simulations.</li>
-              <li>Analyzed existence and uniqueness of weak solutions in Sobolev spaces, forming the theoretical backbone for a robust solver.</li>
+            <ul class="timeline-details">
+              <li>Developed a full FEM pipeline in MATLAB and C++ to solve Laplace, Poisson, and Helmholtz equations, validated against analytical solutions with convergence rates consistent with theoretical O(h²) error bounds.</li>
+              <li>Applied numerical approximation methods (Galerkin Method) for multi-physics simulation and solution validation.</li>
             </ul>
           </div>
         </article>
 
         <article class="timeline-item">
           <span class="timeline-dot" aria-hidden="true"></span>
-          <div class="timeline-card">
+          <div class="timeline-card" tabindex="0" role="button" aria-expanded="false">
             <h3>Research Intern</h3>
             <p class="timeline-org">University of Calgary, Canada</p>
             <p class="timeline-date">May 2023 – Jul 2023</p>
-            <ul>
-              <li>Worked on functional-analytic concepts of Banach and Hilbert spaces, focusing on the Riesz Representation and Lax-Milgram theorems and their applications in PDE theory.</li>
-              <li>Analyzed existence and uniqueness of weak solutions to elliptic PDEs by studying Sobolev spaces and their properties.</li>
-              <li>Explored Laplace, Heat, and Wave equations and continuous Galerkin FEM for solving boundary value problems.</li>
+            <ul class="timeline-details">
+              <li>Analyzed existence and uniqueness of solutions to elliptic PDEs using functional-analytic methods.</li>
+              <li>Applied theoretical frameworks to practical boundary value problems in heat, wave, and Laplace equations.</li>
             </ul>
           </div>
         </article>
@@ -172,48 +170,67 @@
             <span class="pill">Python</span>
             <span class="pill">PyTorch</span>
             <span class="pill">TensorFlow</span>
-            <span class="pill">Scikit-Learn</span>
+            <span class="pill">scikit-learn</span>
             <span class="pill">NumPy</span>
-            <span class="pill">SciPy</span>
             <span class="pill">Pandas</span>
-            <span class="pill">C++</span>
-            <span class="pill">C</span>
-            <span class="pill">R</span>
+            <span class="pill">Matplotlib</span>
+            <span class="pill">Numba</span>
+            <span class="pill">CuPy</span>
+            <span class="pill">Dask</span>
             <span class="pill">SQL</span>
+            <span class="pill">R</span>
+            <span class="pill">C++</span>
             <span class="pill">MATLAB</span>
-            <span class="pill">Git</span>
+            <span class="pill">Git / GitHub</span>
+            <span class="pill">AWS</span>
+            <span class="pill">MS Azure</span>
             <span class="pill">Power BI</span>
             <span class="pill">Tableau</span>
-            <span class="pill">HPC / Linux</span>
+            <span class="pill">Bash</span>
           </div>
         </div>
         <div class="skills-group">
           <h3>ML / AI</h3>
           <div class="skill-pills">
-            <span class="pill">Deep Learning</span>
-            <span class="pill">Image Classification</span>
-            <span class="pill">Time-Series Analysis</span>
-            <span class="pill">Reinforcement Learning</span>
-            <span class="pill">PINNs</span>
-            <span class="pill">Operator Learning</span>
-            <span class="pill">Neural Operators</span>
+            <span class="pill">Supervised Learning</span>
+            <span class="pill">Unsupervised Learning</span>
+            <span class="pill">CNNs</span>
+            <span class="pill">RNNs / LSTMs</span>
             <span class="pill">Transformers</span>
             <span class="pill">LLMs</span>
-            <span class="pill">Statistical Data Analysis</span>
+            <span class="pill">Time-Series Analysis</span>
+            <span class="pill">Reinforcement Learning</span>
+            <span class="pill">Image Processing</span>
           </div>
         </div>
         <div class="skills-group">
-          <h3>Scientific Computing</h3>
+          <h3>Data Science Fundamentals</h3>
           <div class="skill-pills">
+            <span class="pill">Data Cleaning</span>
+            <span class="pill">Data Wrangling</span>
+            <span class="pill">Feature Engineering</span>
+            <span class="pill">Statistical Inference</span>
+            <span class="pill">Probability Theory</span>
+            <span class="pill">Experimental Design</span>
+            <span class="pill">Econometrics</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>Scientific Computing &amp; Methods</h3>
+          <div class="skill-pills">
+            <span class="pill">PINNs</span>
+            <span class="pill">Neural Operators</span>
+            <span class="pill">Operator Learning</span>
+            <span class="pill">FEM</span>
+            <span class="pill">Numerical Analysis</span>
+            <span class="pill">Numerical Linear Algebra</span>
+            <span class="pill">Optimization Algorithms</span>
             <span class="pill">MFEM</span>
             <span class="pill">Netgen / NGSolve</span>
             <span class="pill">Mathematica</span>
             <span class="pill">DeepXDE</span>
             <span class="pill">CUDA</span>
-            <span class="pill">FEM</span>
-            <span class="pill">Numerical Linear Algebra</span>
-            <span class="pill">Model-constrained Optimization</span>
-            <span class="pill">Mathematical Modeling</span>
+            <span class="pill">HPC / Linux</span>
           </div>
         </div>
       </div>
@@ -340,6 +357,88 @@
             <span class="tag">PyTorch</span>
             <span class="tag">PINNs</span>
             <span class="tag">L-BFGS</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Exploiting Sparsity in Matérn Kernel Ridge Regression</h3>
+            <a href="https://github.com/Shivam-3921/Exploiting_Sparsity_in_Matern_Kernel_Ridge_Regression" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">Portland State University</p>
+          <p class="project-metric">~1000× runtime speedup with no loss in accuracy</p>
+          <ul>
+            <li>Identified a structural equivalence between the inverse Matérn-1/2 kernel matrix and a sparse finite-difference operator, reformulating a dense O(N³) kernel ridge regression solve as a sparse O(N) linear system.</li>
+            <li>Implemented both dense (primal/dual) and sparse finite-difference solvers in Python/SciPy, benchmarking accuracy and runtime across increasing problem sizes.</li>
+            <li>Achieved a ~1000× runtime speedup over brute-force dense solving with no loss in prediction accuracy.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SciPy</span>
+            <span class="tag">Kernel Methods</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Credit Default Prediction: Optimizer Benchmarking</h3>
+            <a href="https://github.com/Shivam-3921/Credit_Default_Prediction-Benchmarking_Optimization_Algorithms" class="project-github" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="project-institution">Portland State University</p>
+          <p class="project-metric">93–94% test accuracy across optimizers</p>
+          <ul>
+            <li>Built a PyTorch feedforward neural network to predict consumer credit default risk on ~150,000 borrower records, following EDA, outlier removal, and feature standardization.</li>
+            <li>Benchmarked gradient-based optimizers (Vanilla SGD, SGD with momentum, AdaGrad, RMSProp, Adam) on identical architecture to evaluate convergence speed and generalization.</li>
+            <li>Achieved 93–94% test accuracy across optimizers, with adaptive methods (RMSProp, Adam) converging in significantly fewer epochs than vanilla SGD.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">Optimizers</span>
+            <span class="tag">Classification</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Geometric Median via Subgradient Optimization</h3>
+          </div>
+          <p class="project-institution">Portland State University</p>
+          <p class="project-metric">Subgradient descent on non-smooth convex objective</p>
+          <ul>
+            <li>Derived the subdifferential of a non-smooth convex objective (sum of Euclidean norms) and implemented a subgradient descent method to solve the geometric median problem.</li>
+            <li>Validated convergence on a toy dataset before applying the method to 1,217 U.S. city coordinates to compute the optimal central location minimizing total distance.</li>
+            <li>Demonstrated robust convergence of subgradient methods on non-differentiable objectives without relying on standard gradient-based solvers.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Optimization</span>
+            <span class="tag">Subgradient</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Market Trend Analysis and Forecasting</h3>
+          </div>
+          <p class="project-institution">IISER Bhopal</p>
+          <p class="project-metric">LSTM and ARIMA predictive models</p>
+          <ul>
+            <li>Conducted in-depth analysis of financial markets by analyzing extensive market data and economic indicators.</li>
+            <li>Developed predictive models using LSTM and ARIMA to forecast market trends and movements.</li>
+            <li>Evaluated model performance with accuracy, precision, recall, and F1-score, and applied feature engineering to enhance accuracy.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">LSTM</span>
+            <span class="tag">ARIMA</span>
+            <span class="tag">Forecasting</span>
           </div>
         </article>
 
